@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>TP Tech WAN - Simulations</title>
 
 <style>
@@ -13,159 +14,239 @@
 
 body {
     margin: 0;
-    padding: 60px 25px;
-    background: #14171c;
-    color: white;
+    padding: 55px 30px;
+    background: #f0f6ff;
+    color: #17365d;
     font-family: Arial, sans-serif;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
+/* En-tête */
+header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
 h1 {
-    font-size: 40px;
+    font-size: 38px;
+    color: #164b91;
+    margin-bottom: 15px;
 }
 
 .subtitle {
-    color: #aab5c4;
-    font-size: 18px;
-    margin-bottom: 40px;
+    color: #607b9e;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
+/* Grille des cartes */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
 }
 
+/* Cartes verticales */
 .card {
-    display: block;
-    padding: 28px;
-    background: #202630;
-    border: 1px solid #343d4b;
-    border-radius: 15px;
-    color: white;
+    min-height: 270px;
+    padding: 30px 22px;
+    background: #ffffff;
+    border: 1px solid #d5e5f8;
+    border-radius: 18px;
+    color: #17365d;
     text-decoration: none;
-    transition: 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 0 5px 18px rgba(30, 80, 140, 0.07);
+    transition: all 0.25s ease;
 }
 
 .card:hover {
-    border-color: #3995ed;
-    transform: translateY(-4px);
+    transform: translateY(-7px);
+    border-color: #2878d0;
+    box-shadow: 0 12px 25px rgba(30, 100, 190, 0.15);
 }
 
+/* Numéro du TP */
 .number {
-    color: #3995ed;
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 13px;
+    background: #e5f0ff;
+    color: #1765b5;
+    border-radius: 20px;
+    font-size: 13px;
     font-weight: bold;
 }
 
+/* Titre */
 h2 {
-    margin-bottom: 10px;
+    color: #164b91;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 12px;
 }
 
+/* Description */
 .description {
-    color: #aab5c4;
+    color: #71849e;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
+/* Bas de page */
 footer {
-    margin-top: 45px;
-    color: #8793a3;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #d5e5f8;
+    color: #8194ad;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Adaptation mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 35px 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card {
+        min-height: 240px;
+        padding: 22px 16px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
-<h1>Mes Simulations</h1>
+<header>
+    <h1>Mes Simulations</h1>
 
-<p class="subtitle">
-Travaux pratiques - Technologies WAN
-<br>
-Cliquez sur un TP pour accéder à sa présentation interactive.
-</p>
+    <p class="subtitle">
+        Travaux pratiques - Technologies WAN
+        <br>
+        Explorez les simulations interactives et testez vos connaissances.
+    </p>
+</header>
 
 <div class="grid">
 
-<!-- TP1 Partie 1 -->
-<a class="card" href="simulations/TP1-Part1/">
-    <div class="number">TP 01</div>
-    <h2>TP1 - Partie 1</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP1-Part1/">
+        <div>
+            <div class="number">TP 01</div>
+            <h2>TP1 - Partie 1</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP1 Partie 2 -->
-<a class="card" href="simulations/TP1-Part2/">
-    <div class="number">TP 01</div>
-    <h2>TP1 - Partie 2</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP1-Part2/">
+        <div>
+            <div class="number">TP 01</div>
+            <h2>TP1 - Partie 2</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- BGP -->
-<a class="card" href="simulations/TP-BGP/">
-    <div class="number">TP BGP</div>
-    <h2>BGP</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP-BGP/">
+        <div>
+            <div class="number">TP BGP</div>
+            <h2>BGP</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- Redistribution -->
-<a class="card" href="simulations/TP-Redistribution/">
-    <div class="number">TP Redistribution</div>
-    <h2>Redistribution</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP-Redistribution/">
+        <div>
+            <div class="number">TP Redistribution</div>
+            <h2>Redistribution</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP2 -->
-<a class="card" href="simulations/TP2/">
-    <div class="number">TP 02</div>
-    <h2>TP2</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP2/">
+        <div>
+            <div class="number">TP 02</div>
+            <h2>TP2</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP3 -->
-<a class="card" href="simulations/TP3/">
-    <div class="number">TP 03</div>
-    <h2>TP3</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP3/">
+        <div>
+            <div class="number">TP 03</div>
+            <h2>TP3</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP4 IPsec -->
-<a class="card" href="simulations/TP4-IPsec/">
-    <div class="number">TP 04</div>
-    <h2>TP4 - IPsec</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP4-IPsec/">
+        <div>
+            <div class="number">TP 04</div>
+            <h2>TP4 - IPsec</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP4 GRE -->
-<a class="card" href="simulations/TP4-GRE/">
-    <div class="number">TP 04</div>
-    <h2>TP4 - GRE</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP4-GRE/">
+        <div>
+            <div class="number">TP 04</div>
+            <h2>TP4 - GRE</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP5 FR Basic -->
-<a class="card" href="simulations/TP5-FR-Basic/">
-    <div class="number">TP 05</div>
-    <h2>TP5 - FR Basic</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP5-FR-Basic/">
+        <div>
+            <div class="number">TP 05</div>
+            <h2>TP5 - FR Basic</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
-<!-- TP5 FR Advanced -->
-<a class="card" href="simulations/TP5-FR-Advanced/">
-    <div class="number">TP 05</div>
-    <h2>TP5 - FR Advanced</h2>
-    <p class="description">Présentation interactive ActivePresenter</p>
-</a>
+    <a class="card" href="simulations/TP5-FR-Advanced/">
+        <div>
+            <div class="number">TP 05</div>
+            <h2>TP5 - FR Advanced</h2>
+        </div>
+        <p class="description">Présentation interactive ActivePresenter</p>
+    </a>
 
 </div>
 
 <footer>
-TP Tech WAN - Simulations interactives
+    TP Tech WAN - Simulations interactives
 </footer>
 
 </div>
+
 </body>
 </html>
-
