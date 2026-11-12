@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TP Tech WAN - Simulations</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 60px 25px;
+    background: #14171c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 { font-size: 40px; }
+
+.subtitle {
+    color: #aab5c4;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    display: block;
+    padding: 28px;
+    background: #202630;
+    border: 1px solid #343d4b;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.card:hover {
+    border-color: #3995ed;
+    transform: translateY(-4px);
+}
+
+.number {
+    color: #3995ed;
+    font-weight: bold;
+}
+
+h2 { margin-bottom: 10px; }
+
+.description { color: #aab5c4; }
+
+footer {
+    margin-top: 45px;
+    color: #8793a3;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Mes Simulations</h1>
+<p class="subtitle">
+Travaux pratiques - Technologies WAN
+<br>Cliquez sur un TP pour accéder à sa présentation interactive.
+</p>
+
+<div class="grid">
+
+<a class="card" href="simulations/TP1-Part1/">
+    <div class="number">TP 01</div>
+    <h2>TP1 - Partie 1</h2>
+    <p class="description">Présentation interactive ActivePresenter</p>
+</a>
+
+<a class="card" href="simulations/TP1-Part2/">
+    <div class="number">TP 01</div>
+    <h2>TP1 - Partie 2</h2>
+    <p class="description">Présentation interactive ActivePresenter</p>
+</a>
+
+</div>
+
+<footer>
+TP Tech WAN - Simulations interactives
+</footer>
+
+</div>
+</body>
+</html>
